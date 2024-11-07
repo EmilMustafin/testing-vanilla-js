@@ -133,7 +133,7 @@
     }
 }
 
-@media (min-width: 637px) {
+@media (max-width: 637px) {
     .testContent__content-question-options-short {
         flex-direction: column;
     }
