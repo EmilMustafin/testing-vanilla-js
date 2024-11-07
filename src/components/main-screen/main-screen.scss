@@ -1,0 +1,11 @@
+.mainScreen {
+    display: flex;
+    height: 100%;
+    margin: auto;
+
+    &__text {
+        display: flex;
+        margin: auto;
+        color: #34515e;
+    }
+}

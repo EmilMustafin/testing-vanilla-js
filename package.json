@@ -1,0 +1,40 @@
+{
+    "name": "intas-test",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "format": "prettier --write .",
+        "lint:format": "prettier --cache --check .",
+        "lint": "npx eslint . --cache   --cache-location ./node_modules/.cache/eslint --report-unused-disable-directives --max-warnings 0",
+        "lint:style": "stylelint --max-warnings 0 --ignore-path .gitignore \"**/*.{css,scss,vue,vuex}\"",
+        "lint:test": "concurrently \"npm run tsc:check\" \"npm run lint\" \"npm run lint:format\" \"npm run lint:style\"",
+        "tsc:check": "tsc --noEmit",
+        "update": "npx npm-check-updates"
+    },
+    "devDependencies": {
+        "@eslint/compat": "^1.2.2",
+        "@eslint/eslintrc": "^3.1.0",
+        "@eslint/js": "^9.14.0",
+        "@types/node": "^22.8.7",
+        "@typescript-eslint/eslint-plugin": "^8.12.2",
+        "@typescript-eslint/parser": "^8.12.2",
+        "concurrently": "^9.0.1",
+        "eslint": "^9.14.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-simple-import-sort": "^12.1.1",
+        "globals": "^15.11.0",
+        "sass-embedded": "^1.80.6",
+        "stylelint": "^16.10.0",
+        "stylelint-config-recess-order": "^5.1.1",
+        "stylelint-config-standard": "^36.0.1",
+        "stylelint-config-standard-scss": "^13.1.0",
+        "ts-node": "^10.9.2",
+        "typescript": "~5.6.2",
+        "typescript-eslint": "^8.12.2",
+        "vite": "^5.4.10"
+    }
+}
